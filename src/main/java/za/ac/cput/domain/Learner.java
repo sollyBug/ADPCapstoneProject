@@ -1,3 +1,8 @@
+/* Learner.java
+Learner model class
+Author: Ethan WIlliams(221454780)
+Date: 25 March 2026
+*/
 package za.ac.cput.domain;
 
 import java.time.LocalDate;
