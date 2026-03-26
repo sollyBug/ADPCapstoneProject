@@ -15,9 +15,7 @@ public class MockTest {
     private boolean passed;
 
     
-//default contructor
-    public MockTest{
-    }
+
     //constructor arg
     private MockTest(Builder builder) {
         this.testId = builder.testId;
@@ -58,6 +56,7 @@ public class MockTest {
             this.passed = passed;
             return this;
         }
+
 
         public Builder copy(MockTest mockTest) {
             this.testId = mockTest.testId;

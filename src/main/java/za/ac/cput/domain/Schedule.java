@@ -14,10 +14,7 @@ public class Schedule {
     private int vehicleId;
     private String status;
 
-//default contructor
-    public Schedule(){
-        
-    }
+
         //constructor arg
     private Schedule(Builder builder) {
         this.scheduleId = builder.scheduleId;
