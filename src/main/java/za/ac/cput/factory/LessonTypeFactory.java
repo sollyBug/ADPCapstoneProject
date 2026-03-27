@@ -1,8 +1,3 @@
-/* LessonTypeFactory.java
-LessonTypeFactory model class
-Author: Rameez Karriem (222357320)
-Date: 26 March 2026
-*/
 /*
  * LessonTypeFactory.java
  * LessonTypeFactory class
@@ -13,16 +8,14 @@ package za.ac.cput.factory;
 
 import za.ac.cput.domain.LessonType;
 import za.ac.cput.util.Helper;
-import java.time.LocalTime;
 
-// LessonTypeFactory class responsible for creating LessonType objects with validation.
-
+// Factory class for creating LessonType objects with validation
 public class LessonTypeFactory {
 
     public static LessonType createLessonType(String lessonId,
                                               String typeName,
                                               double price,
-                                              LocalTime duration,
+                                              int duration,
                                               String description){
 
         // Validate String inputs
@@ -32,13 +25,13 @@ public class LessonTypeFactory {
             return null;
         }
 
-        // Validate price (must be >= 0)
+        // Validate price must be >= 0
         if(price < 0){
             return null;
         }
 
-        // Validate duration (must not be null and should represent a positive time)
-        if(duration == null || (duration.getHour() == 0 && duration.getMinute() == 0)){
+        // Validate duration must be > 0
+        if(duration <= 0){
             return null;
         }
 
@@ -47,7 +40,7 @@ public class LessonTypeFactory {
                 .setLessonId(lessonId)
                 .setTypeName(typeName)
                 .setPrice(price)
-                .setDuration(duration)  // Now passing LocalTime directly
+                .setDuration(duration)
                 .setDescription(description)
                 .build();
     }
