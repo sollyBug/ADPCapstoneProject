@@ -15,10 +15,16 @@ public class ScheduleFactory {
 
     public static Schedule createSchedule(String scheduleId, String instructorId, String vehicleId, String status ){
 // Validate scheduleId , instructorId, vehicleId & status (must not be null or empty)
-        if (Helper.isNullOrEmpty(scheduleId)) {
+        if (Helper.isNullOrEmpty(scheduleId)
+            || Helper.isNullOrEmpty(instructorId)
+             || Helper.isNullOrEmpty(vehicleId)
+               || Helper.isNullOrEmpty(status)){
+           
+            
             return null;
 
-        }
+    }
+ 
 //build and return Schedule object using builder pattern
         return new Schedule.Builder().setScheduleId(scheduleId)
                 .setInstructorId(instructorId)
