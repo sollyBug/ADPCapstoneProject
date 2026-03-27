@@ -98,7 +98,7 @@ public class ScheduleRepositoryTest {
     @Order(5)
     void getAll() {
 
-        // Add an schedule to repository
+        // Add an schedule  to  repository
         scheduleRepository.create(createSchedule());
 
         // Check repository is not empty
