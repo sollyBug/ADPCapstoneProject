@@ -32,7 +32,7 @@ public class MockTestFactoryTest {
                 "A001",                // testId
                 LocalDate.of(2026, 6,25 ), // localdate
                 50,                     // score
-                true              // userId
+                true              // boolean
         );
         assertNotNull(mockTest);  // Verify mocktest was created
     }
@@ -45,7 +45,7 @@ public class MockTestFactoryTest {
                     "A001",                // testId
                     LocalDate.of(2026, 6,25 ) // localdate
                     ,       -1,              // score (negative number)
-                    true              // userId
+                    true              // boolean
             );
             assertNotNull(mockTest);  // Verify mocktest was created
         }
@@ -60,7 +60,7 @@ public class MockTestFactoryTest {
                     LocalDate.of(2026, 6,25 ),   // localdate
                     50,       // score
                                   
-                    true                // 
+                    true                //boolean
             );
             assertNull(mockTest);  // Verify mocktest was NOT created
         }
