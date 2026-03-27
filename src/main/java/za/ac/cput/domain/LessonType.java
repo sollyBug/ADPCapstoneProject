@@ -9,9 +9,9 @@ package za.ac.cput.domain;
 // Immutable LessonType entity with Builder pattern for flexible construction
 public class LessonType {
     private String lessonId;         // Unique identifier for the lesson type
-    private String typeName;         // Name of the lesson type (e.g., "Guitar Basics")
+    private String typeName;         // Name of the lesson type
     private double price;            // Price per lesson for this lesson type
-    private int duration;            // Duration of the lesson in minutes (e.g., 90 for 1.5 hours)
+    private int duration;            // Duration of the lesson in minutes
     private String description;      // Detailed description of the lesson type
 
     // Public default constructor
