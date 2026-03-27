@@ -3,7 +3,15 @@ Booking model class
 Author: Rameez Karriem (222357320)
 Date: 25 March 2026
 */
+/* Booking.java
+Booking model class
+Author: Rameez Karriem (222357320)
+Date: 25 March 2026
+*/
 package za.ac.cput.domain;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 /**
  * Represents a booking entity in the system.
@@ -12,8 +20,8 @@ package za.ac.cput.domain;
  */
 public class Booking {
     private String bookingId;      // Unique identifier for the booking
-    private String bookingDate;    // Date of the booking
-    private String timeSlot;       // Time slot for the booking 
+    private LocalDate bookingDate;    // Date of the booking
+    private LocalTime timeSlot;       // Time slot for the booking
     private String status;         // Current status of the booking
     private String learnerId;         // ID of the learner who made the booking
     private String instructorId;      // ID of the instructor assigned to the booking
@@ -54,7 +62,7 @@ public class Booking {
      * Gets the booking date.
      * @return The date of the booking
      */
-    public String getBookingDate() {
+    public LocalDate getBookingDate() {
         return bookingDate;
     }
 
@@ -62,7 +70,7 @@ public class Booking {
      * Gets the time slot.
      * @return The time slot for the booking
      */
-    public String getTimeSlot() {
+    public LocalTime getTimeSlot() {
         return timeSlot;
     }
 
@@ -97,8 +105,8 @@ public class Booking {
     public static class Builder {
         // Fields mirroring the Booking class
         private String bookingId;
-        private String bookingDate;
-        private String timeSlot;
+        private LocalDate bookingDate;
+        private LocalTime timeSlot;
         private String status;
         private String learnerId;
         private String instructorId;
@@ -118,7 +126,7 @@ public class Booking {
          * @param bookingDate The date of the booking
          * @return The current Builder instance (for method chaining)
          */
-        public Builder setBookingDate(String bookingDate) {
+        public Builder setBookingDate(LocalDate bookingDate) {
             this.bookingDate = bookingDate;
             return this;
         }
@@ -128,7 +136,7 @@ public class Booking {
          * @param timeSlot The time slot for the booking
          * @return The current Builder instance (for method chaining)
          */
-        public Builder setTimeSlot(String timeSlot) {
+        public Builder setTimeSlot(LocalTime timeSlot) {
             this.timeSlot = timeSlot;
             return this;
         }
@@ -192,4 +200,3 @@ public class Booking {
         }
     }
 }
-

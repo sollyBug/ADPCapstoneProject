@@ -3,7 +3,14 @@ LessonType model class
 Author: Rameez Karriem (222357320)
 Date: 25 March 2026
 */
+/* LessonType.java
+LessonType model class
+Author: Rameez Karriem (222357320)
+Date: 25 March 2026
+*/
 package za.ac.cput.domain;
+
+import java.time.LocalTime;
 
 /**
  * Represents a lesson type entity in the system.
@@ -12,10 +19,10 @@ package za.ac.cput.domain;
  * Uses the Builder pattern for flexible object construction.
  */
 public class LessonType {
-    private String lessonId;           // Unique identifier for the lesson type
+    private String lessonId;         // Unique identifier for the lesson type
     private String typeName;        // Name of the lesson type (e.g., "Guitar Basics")
     private double price;           // Price per lesson for this lesson type
-    private int duration;           // Duration of the lesson in minutes
+    private LocalTime duration;     // Duration of the lesson (e.g., 01:30 for 1 hour 30 minutes)
     private String description;     // Detailed description of the lesson type
 
     /**
@@ -67,9 +74,9 @@ public class LessonType {
 
     /**
      * Gets the lesson duration.
-     * @return The duration of the lesson in minutes
+     * @return The duration of the lesson as LocalTime
      */
-    public int getDuration() {
+    public LocalTime getDuration() {
         return duration;
     }
 
@@ -88,10 +95,10 @@ public class LessonType {
      *
      */
     public static class Builder {
-        private String lessonId;           // Unique identifier for the lesson type
+        private String lessonId;         // Unique identifier for the lesson type
         private String typeName;        // Name of the lesson type
         private double price;           // Price per lesson
-        private int duration;           // Duration in minutes
+        private LocalTime duration;     // Duration as LocalTime
         private String description;     // Detailed description
 
         /**
@@ -130,10 +137,10 @@ public class LessonType {
         /**
          * Sets the lesson duration.
          *
-         * @param duration The duration of the lesson in minutes
+         * @param duration The duration of the lesson as LocalTime
          * @return The current Builder instance (for method chaining)
          */
-        public Builder setDuration(int duration) {
+        public Builder setDuration(LocalTime duration) {
             this.duration = duration;
             return this;
         }
@@ -179,4 +186,3 @@ public class LessonType {
         }
     }
 }
-
