@@ -8,7 +8,9 @@ package za.ac.cput.domain;
 import java.time.LocalDate;
 
 public class MockTest {
+
     private String testId;
+    private String learnerId;
     private LocalDate dateTaken;
     private int score;
     private boolean passed;
@@ -17,6 +19,15 @@ public class MockTest {
 //default contructor
     public MockTest() {
     }
+
+    public MockTest(String testId, String learnerId, LocalDate dateTaken, int score, boolean passed) {
+        this.testId = testId;
+        this.learnerId = learnerId;
+        this.dateTaken = dateTaken;
+        this.score = score;
+        this.passed = passed;
+    }
+
     //constructor arg
     private MockTest(Builder builder) {
         this.testId = builder.testId;
@@ -27,6 +38,7 @@ public class MockTest {
 
 
     public String getTestId() { return testId; }
+    public String getLearnerId() {return learnerId; }
     public LocalDate getDateTaken() { return dateTaken; }
     public int getScore() { return score; }
     public boolean isPassed() { return passed; }
@@ -34,6 +46,7 @@ public class MockTest {
 //Builder pattern
     public static class Builder {
         private String testId;
+        private String learnerId;
         private LocalDate dateTaken;
         private int score;
         private boolean passed;
@@ -42,6 +55,10 @@ public class MockTest {
             this.testId = testId;
             return this;
         }
+    public Builder setLearnerId(String learnerId) {
+        this.learnerId = learnerId;
+        return this;
+    }
 
         public Builder setDateTaken(LocalDate dateTaken) {
             this.dateTaken = dateTaken;
@@ -63,6 +80,7 @@ public class MockTest {
         */
         public Builder copy(MockTest mockTest) {
             this.testId = mockTest.testId;
+            this.learnerId = mockTest.learnerId;
             this.dateTaken = mockTest.dateTaken;
             this.score = mockTest.score;
             this.passed = mockTest.passed;

@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
             Schedule schedule = ScheduleFactory.createSchedule(
                     "AB01",                // scheduleId
                     "C001", // instructorId
-                    "TC001",                     // vehicleId
+                    LocalDate.of(2026, 6,22 ),                     // date
                     "Accepted"             // status
             );
             assertNotNull(schedule);  // Verify schedule was created
@@ -46,7 +46,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
             Schedule schedule = ScheduleFactory.createSchedule(
                     "",                // scheduleId (empty)
                     "C001", // instructorId
-                    "TC001",                     // vehicleId
+                    LocalDate.of(2026, 6,22 ),                     // vehicleId
                     "Accepted"             // status
             );
             assertNull(schedule);  // Verify schedule was NOT created

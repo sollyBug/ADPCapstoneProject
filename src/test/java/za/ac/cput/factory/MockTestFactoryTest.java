@@ -30,6 +30,7 @@ public class MockTestFactoryTest {
     public void testCreateMockTest() {
         MockTest mockTest = MockTestFactory.createMockTest(
                 "A001",                // testId
+                "UT01", //LearnerId
                 LocalDate.of(2026, 6,25 ), // localdate
                 50,                     // score
                 true              // boolean
@@ -43,6 +44,7 @@ public class MockTestFactoryTest {
         {
             MockTest mockTest = MockTestFactory.createMockTest(
                     "A001",                // testId
+                    "UT01", //learnerID
                     LocalDate.of(2026, 6,25 ) // localdate
                     ,       -1,              // score (negative number)
                     true              // boolean
@@ -57,6 +59,7 @@ public class MockTestFactoryTest {
 
             MockTest mockTest = MockTestFactory.createMockTest(
                     "A001",             // testID
+                    "UT01", //learnerID
                     LocalDate.of(2026, 6,25 ),   // localdate
                     50,       // score
                                   

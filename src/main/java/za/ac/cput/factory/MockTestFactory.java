@@ -17,7 +17,7 @@ import java.time.LocalDate;
 public class MockTestFactory {
 
  // Validate testId , dateTaken, score & pass (must not be null or empty)
-    public static MockTest createMockTest(String testId, LocalDate dateTaken, int score, boolean pass){
+    public static MockTest createMockTest(String testId,String learnerId, LocalDate dateTaken, int score, boolean pass){
         if (Helper.isNullOrEmpty(testId)) {
             return null;
         }
@@ -26,7 +26,9 @@ public class MockTestFactory {
             return null;
         }
         //build and return MockTest object using builder pattern
+
         return new MockTest.Builder().setTestId(testId)
+                .setLearnerId(learnerId)
                 .setDateTaken(dateTaken)
                 .setScore(score)
                 .setPassed(pass)
